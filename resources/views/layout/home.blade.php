@@ -133,19 +133,19 @@
                         </li>
                         @if (Route::has('login'))
                             @auth
-                                @if (Auth::user()->u-type === 'ADMIN')
+                                @if (Auth::user()->utype === 'ADMIN')
                                     <li class="login-form"> <a href="#" title="Register">My Accunt(Admin)</a>
                                         <ul class="drop-down one-column hover-fade">
-                                            <li><a href="#">Dashboard</a></li>
+                                            <li><a href="{{Route('admin.dashboard')}}">Dashboard</a></li>
                                             <li><a href="{{ Route('logout') }}"
                                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Logout</a>
                                             </li>
                                         </ul>
                                     </li>
-                                @elseif(Auth::user()->u-type == 'SVP')
+                                @elseif(Auth::user()->utype === 'SVP')
                                     <li class="login-form"> <a href="#" title="Register">My Account(Service P)</a>
                                         <ul class="drop-down one-column hover-fade">
-                                            <li><a href="#">Dashboard</a></li>
+                                            <li><a href="{{Route('sprovider.dashboard')}}">Dashboard</a></li>
                                             <li><a href="{{ Route('logout') }}"
                                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Logout</a>
                                             </li>
@@ -154,7 +154,7 @@
                                 @else
                                     <li class="login-form"> <a href="#" title="Register">My Account(Custmer)</a>
                                         <ul class="drop-down one-column hover-fade">
-                                            <li><a href="#">Dashboard</a></li>
+                                            <li><a href="{{Route('customer.dashboard')}}">Dashboard</a></li>
                                             <li><a href="{{ Route('logout') }}"
                                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Logout</a>
                                             </li>
