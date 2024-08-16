@@ -23,16 +23,17 @@ use App\Http\Livewire\Servicep\ServiceProviderComponent;
 Route::get('/',HomeComponent::class)->name('home');
 
 //for customer
-Route::middleware(['auth:sanctum','verified'])->group( function () {
-        Route::get('/customer/dashboard',CustomerDashboardComponent::class)->name('customer.dashboard');
-    });
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('/customer/dashboard', CustomerDashboardComponent::class)->name('customer.dashboard');
+});
+
 
 //for admin
-Route::middleware(['auth::sanctum','verified','authadmin'])->group(function(){
+Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
 });
 
 //for service provider
 Route::middleware(['auth:sanctum','verified'.'authservicep'])->group(function(){
-    Route::get('/sprovider/dashboard',ServiceProviderComponent::class)->name('admin.dashboard');
+    Route::get('/sprovider/dashboard',ServiceProviderComponent::class)->name('sprovider.dashboard');
 });

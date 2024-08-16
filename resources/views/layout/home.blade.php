@@ -161,7 +161,7 @@
                                         </ul>
                                     </li>
                                 @endif
-                                <form id="logout-form" action="{{ Route('logout') }}" method="POST">
+                                <form id="logout-form" action="{{ Route('logout') }}" method="POST" style="display: none">
                                     @csrf
                                 </form>
                             @else

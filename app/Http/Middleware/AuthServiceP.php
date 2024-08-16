@@ -17,7 +17,7 @@ class AuthServiceP
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::users()->utype === 'SVP')
+        if(Auth::user()->utype === 'SVP')
         {
             return $next($request);   
         }
