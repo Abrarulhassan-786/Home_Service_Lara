@@ -34,6 +34,6 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
 });
 
 //for service provider
-Route::middleware(['auth:sanctum','verified'.'authservicep'])->group(function(){
+Route::middleware(['auth:sanctum','verified','authservicep'])->group(function(){
     Route::get('/sprovider/dashboard',ServiceProviderComponent::class)->name('sprovider.dashboard');
 });
