@@ -138,6 +138,7 @@
                                     <li class="login-form"> <a href="#" title="Register">My Accunt(Admin)</a>
                                         <ul class="drop-down one-column hover-fade">
                                             <li><a href="{{Route('admin.dashboard')}}">Dashboard</a></li>
+                                            <li><a href="{{ route('admin.service_category') }}">Admin View SVC</a></li>
                                             <li><a href="{{ Route('logout') }}"
                                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Logout</a>
                                             </li>
