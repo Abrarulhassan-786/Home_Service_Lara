@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminServiceCategory;
+use App\Http\Livewire\Admin\AdminAddServiceCategoryComponent;
 use App\Http\Livewire\Customer\CustomerDashboardComponent;
 use App\Http\Livewire\Servicep\ServiceProviderComponent;
 use App\Http\Livewire\ServiceCategoryComponent;
@@ -35,6 +36,8 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
     // Admin Service Category Route
     Route::get('/admin/service_category', AdminServiceCategory::class)->name('admin.service_category');
+    //Add new Category by Admin
+    Route::get('/admin/service_category/add',AdminAddServiceCategoryComponent::class)->name('admin.service_category_add');
 });
 
 //for service provider

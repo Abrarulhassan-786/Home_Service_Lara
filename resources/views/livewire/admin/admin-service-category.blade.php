@@ -20,6 +20,18 @@
                 <div class="container">
                     <div class="row portfolioContainer">
                         <div class="col-md-12 profile1">
+                            <div class="panel bg-light">
+                                <dvi class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h3>All Service Category</h3>
+                                        </div>
+                                        <div class="col-md-6 text-end">
+                                            <a href="{{{Route("admin.service_category_add")}}}" class="btn btn-info pull-right">Add New</a>
+                                        </div>
+                                    </div>
+                                </dvi>
+                            </div>
                             <table width="100%" style="border-collapse: collapse; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
                                 <thead>
                                     <tr style="background-color: #333; color: white;">
